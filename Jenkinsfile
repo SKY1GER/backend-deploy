@@ -12,7 +12,7 @@ pipeline {
     }
     environment{
         def appVersion = '' //variable declaration
-        nexusUrl = 'http://184.72.200.220:8081/repository/backend/'
+        nexusUrl = 'nexus.daws80s.online:8081'
     }
     stages {
         stage('print the version'){

@@ -35,7 +35,7 @@ pipeline {
                 sh """
                     pwd
                     cd terraform
-                    terraform plan -lock=false -var="app_version=${params.appVersion} "
+                    terraform plan -lock=false -var="appVersion=${params.appVersion} "
                 """
             }
         }
@@ -44,7 +44,7 @@ pipeline {
             steps{
                 sh """
                     cd terraform
-                    terraform apply -lock=false -auto-approve -var="app_version=${params.appVersion}"
+                    terraform apply -lock=false -auto-approve -var="appVersion=${params.appVersion}"
                 """
             }
         }
